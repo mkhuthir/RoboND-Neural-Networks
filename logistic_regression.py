@@ -1,15 +1,22 @@
+#!/usr/bin/python
+
 import numpy as np
+
 # Setting the random seed, feel free to change it and see different solutions.
 np.random.seed(42)
 
 def sigmoid(x):
     return 1/(1+np.exp(-x))
+
 def sigmoid_prime(x):
     return sigmoid(x)*(1-sigmoid(x))
+
 def prediction(X, W, b):
     return sigmoid(np.matmul(X,W)+b)
+
 def error_vector(y, y_hat):
     return [-y[i]*np.log(y_hat[i]) - (1-y[i])*np.log(1-y_hat[i]) for i in range(len(y))]
+
 def error(y, y_hat):
     ev = error_vector(y, y_hat)
     return sum(ev)/len(ev)
