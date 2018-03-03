@@ -7,5 +7,6 @@ def softmax(z):
     return np.exp(z) / np.sum(np.exp(z), axis=0)
 
 logits = [3.0, 1.0, 0.2]
-print(softmax(logits))
+sm = softmax(logits)
 
+print("\nLogits :\t{}\nSoftmax:\t{}\nTotal  :\t{}\n".format(logits,sm, np.sum(sm)))
