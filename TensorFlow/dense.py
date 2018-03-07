@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import numpy as np
-import oldtensorflow as tf
+import tensorflow as tf
 
 
 # custom init with the seed set to 0 by default

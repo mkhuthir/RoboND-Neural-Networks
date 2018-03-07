@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import oldtensorflow as tf
+import tensorflow as tf
 
 
 def mean_iou(ground_truth, prediction, num_classes):
